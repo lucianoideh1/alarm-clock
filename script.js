@@ -1,5 +1,6 @@
 const currentTime = document.querySelector("h1"),
-selectMenu = document.querySelectorAll("select");
+selectMenu = document.querySelectorAll("select"),
+setAlarmBtn = document.querySelector("button");
 
 for(let i = 12; i > 0; i--){
     i = i < 10 ? "0" + i : i;
@@ -40,3 +41,10 @@ setInterval(()=>{
 
     currentTime.innerText = (`${h}:${m}:${s} ${ampm}`)
 }, 1000);
+
+function setAlarm(){
+    let time = `${selectMenu[0].value}:${selectMenu[1].value}:${selectMenu[2].value}`
+    console.log(time)
+}
+
+setAlarmBtn.addEventListener("click",setAlarm)
