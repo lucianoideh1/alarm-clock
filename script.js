@@ -44,6 +44,11 @@ setInterval(()=>{
 
 function setAlarm(){
     let time = `${selectMenu[0].value}:${selectMenu[1].value}:${selectMenu[2].value}`
+  
+    if( time.includes("Hour") || time.includes("Minute") || time.includes("AM/PM")){
+        return alert("Please, select any valid time to set an alarm");
+    }
+
     console.log(time)
 }
 
