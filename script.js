@@ -5,7 +5,7 @@ setAlarmBtn = document.querySelector("button");
 
 
 let alarmTime, isAlarmSet = false,
-ringtone = new Audio("ringtone.mp3");
+ringtone = new Audio("./files/ringtone.mp3");
 for(let i = 12; i > 0; i--){
     i = i < 10 ? "0" + i : i;
     let option = `<option value = "${i}">${i}</option>`;
@@ -39,7 +39,7 @@ setInterval(()=>{
 
     h = h == 0 ? h = 12 : h;
 
-    h = h < 10 ? "0" + h : m;
+    h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
 
@@ -59,7 +59,6 @@ function setAlarm(){
         setAlarmBtn.innerText = "Set Alarm";
         return isAlarmSet = false;
     }
-
 
     let time = `${selectMenu[0].value}:${selectMenu[1].value}:${selectMenu[2].value}`
   
