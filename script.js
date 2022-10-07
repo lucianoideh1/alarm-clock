@@ -43,7 +43,7 @@ setInterval(()=>{
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
 
-    currentTime.innerText = (`${h}:${m}:${s} ${ampm}`)
+    currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
 
     if(alarmTime == `${h}:${m} ${ampm}`){
         ringtone.play();
